@@ -28,7 +28,7 @@ app.post('/sign-up',async(req:Request, res:Response) => {
     }
 } )
 
-app.post("/sign-in", (req:Request, res:Response) => { 
+app.post("/sign-in",async(req:Request, res:Response) => { 
     const {username, password} = req.body
     const filtred = USERS.filter(user => user.username === username  )
     if(filtred.length === 0){
